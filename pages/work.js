@@ -20,7 +20,8 @@ export default function Work() {
             <div key={item.title}>
               <h2>{item.title}</h2>
               <p className="prose-2xl">{item.content}</p>
-              <Link href={item.url} ><a className="prose-2xl mt-8 inline-block">Visit project</a></Link>
+              <p className="mt-2 italic prose-2xl text-gray-400">{item.stack}</p>
+              <Link href={item.url} ><a className="inline-block mt-8 prose-2xl">Visit project</a></Link>
             </div>
           ))} 
         </div>
