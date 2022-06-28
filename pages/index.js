@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -9,6 +10,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
+
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-G29CC8YJDT"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-G29CC8YJDT');
+        `}
+      </Script>
 
       <main>
         <div className="mb-16 md:mb-32">
